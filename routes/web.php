@@ -13,3 +13,4 @@
 
 Route::get('/', 'statcontroller@index');
 Route::get('/stats', 'statcontroller@index');
+Route::get('/add', 'statcontroller@create');

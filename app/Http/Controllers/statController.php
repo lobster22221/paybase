@@ -46,7 +46,7 @@ class statController extends Controller
      */
     public function create()
     {
-        //
+        return view('AddWage');
     }
 
     /**

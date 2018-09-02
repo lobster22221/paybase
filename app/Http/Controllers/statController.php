@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\wage;
+use \App\Wage;
 
 class statController extends Controller
 {
@@ -57,7 +57,23 @@ class statController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        
+        
+        $w = Wage::create([
+        'date' => request('date'),
+        'tip' => request('tip'),
+        'employer' => request('employer'),
+        'rate' => request('wage'),
+        'hours' => request('hours'),
+]);
+        
+        $w->save();
+        
+         
+      
+        
+       
     }
 
     /**

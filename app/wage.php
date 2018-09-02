@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wage extends Model
 {
+    protected $guarded = [];
+    public $timestamps = false;
     public $id;
     public $date;
-    public $wage;
+    public $rate;
     public $hours;
     public $tip;
     public $employer;

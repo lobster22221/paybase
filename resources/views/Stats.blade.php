@@ -39,7 +39,7 @@
     <table  class="table table-striped">
         <thead>
     <tr>
-        <th>id</th>
+
         <th>date</th>
         <th>wage</th>
         <th>hours</th>
@@ -50,11 +50,11 @@
     <tbody>
      @foreach ($wage as $pay)
     <tr>
-      <td>{{$pay['id']}}</td>
-      <td>{{ \Carbon\Carbon::parse($pay['date'])->format('l, d F, Y')}}}</td>
-      <td>{{$pay['wage']}}</td>
-      <td>{{$pay['hours']}}</td>
-      <td>{{$pay['tip']}}</td>
+      
+      <td>{{ \Carbon\Carbon::parse($pay['date'])->format('l, d F, Y')}}</td>
+      <td>${{ number_format($pay['wage'],2, '.', '.')}}</td>
+      <td>{{ number_format($pay['hours'],2, '.', '.')}} hrs </td>
+      <td>${{ number_format($pay['tip'],2, '.', '.')}}</td>
       <td>{{$pay['employer']}}</td>
     </tr>  
      @endforeach

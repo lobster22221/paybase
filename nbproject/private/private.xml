@@ -3,13 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/Server/XAMPP/htdocs/paybase/app/Http/Controllers/Controller.php</file>
-            <file>file:/F:/Server/XAMPP/htdocs/paybase/public/index.php</file>
-            <file>file:/F:/Server/XAMPP/htdocs/paybase/routes/api.php</file>
-            <file>file:/F:/Server/XAMPP/htdocs/paybase/.env</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/AddWage.blade.php</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/Layout.blade.php</file>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/app/Http/Controllers/statController.php</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/app/wage.php</file>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/routes/web.php</file>
-            <file>file:/F:/Server/XAMPP/htdocs/paybase/routes/channels.php</file>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/Stats.blade.php</file>
         </group>
     </open-files>

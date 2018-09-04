@@ -9,15 +9,15 @@
 </div>
 <div class="form-group">
     <label for="formWage">Wage</label>
-    <input type="number" class="form-control" data-number-to-fixed="2" id="formWage" name="wage" value="0">
+    <input type="number" class="form-control" id="formWage" name="wage" step="0.01" value="0">
 </div>
 <div class="form-group">
     <label for="formTip">Tip</label>
-    <input type="number" class="form-control" data-number-to-fixed="2" id="formTip" name="tip" value="0">
+    <input type="number" class="form-control" data-number-to-fixed="2" id="formTip" name="tip"  step="0.01" value="0">
 </div> 
 <div class="form-group">
     <label for="formHours">Hours</label>
-    <input type="number" class="form-control" id="formHours" name="hours" value="0">
+    <input type="number" class="form-control" id="formHours" name="hours" step="0.01" value="0">
 </div> 
 <div class="form-group">
     <label for="formEmployer">Employer</label>

@@ -5,6 +5,8 @@
         <group>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/AddWage.blade.php</file>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/Layout.blade.php</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/public/js/bootstrap.bundle.js</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/Components/Navbar.blade.php</file>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/app/Http/Controllers/statController.php</file>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/app/wage.php</file>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/routes/web.php</file>

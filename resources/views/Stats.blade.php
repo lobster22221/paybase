@@ -52,9 +52,13 @@
     <tr>
       
       <td>{{ \Carbon\Carbon::parse($pay['date'])->format('l, d F, Y')}}</td>
-      <td>${{ number_format($pay['wage'],2, '.', '.')}}</td>
+      
+      <td>$ {{ number_format($pay['rate'],2, '.', '.')}}</td>
+      
       <td>{{ number_format($pay['hours'],2, '.', '.')}} hrs </td>
-      <td>${{ number_format($pay['tip'],2, '.', '.')}}</td>
+      
+      <td>$ {{ number_format($pay['tip'],2, '.', '.')}}</td>
+      
       <td>{{$pay['employer']}}</td>
     </tr>  
      @endforeach

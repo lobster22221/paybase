@@ -90,7 +90,7 @@ var myChart = new Chart(ctx, {
         <th>wage</th>
         <th>hours</th>
         <th>tip</th>
-        <th>employer</th>            
+            
     </tr>
     </thead>
     <tbody>

@@ -36,7 +36,7 @@
     </tr>  
     </table>
         
-        gRAPH
+        Tip graph
         <br>
         <canvas id="myChart" width="400" height="400"></canvas>
         <script>
@@ -105,7 +105,7 @@ var myChart = new Chart(ctx, {
       
       <td>$ {{ number_format($pay['tip'],2, '.', '.')}}</td>
       
-      <td>{{$pay['employer']}}</td>
+      
     </tr>  
      @endforeach
     </tbody>

@@ -50,7 +50,7 @@ var myChart = new Chart(ctx, {
                         @endforeach
         ],
         datasets: [{
-            label: '# of Votes',
+            label: 'Tips earned over time',
             data: [
                         @foreach ($wage as $pay)
                         {{$pay['tip']}},
@@ -62,19 +62,23 @@ var myChart = new Chart(ctx, {
                
             ],
             borderColor: [
-                'rgba(255,99,132,1)',
+                'rgba(0,0,0,1)',
                
             ],
-            borderWidth: 1
+            borderWidth: 1.5
         }]
     },
     options: {
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero:true
+                    beginAtZero:false,
+                     callback: function(value, index, values) {
+                        return '$' + value}
+                    
                 }
             }]
+               
         }
     }
 });

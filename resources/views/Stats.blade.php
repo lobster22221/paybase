@@ -2,7 +2,7 @@
 <div class="container">    
     <div class="row">
         <div class="col-sm"></div>
-        <div class="col-lg">
+        <div class="col-12">
         <h1>overall Stats</h1>   
         full table
         

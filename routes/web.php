@@ -13,5 +13,9 @@
 
 Route::get('/', 'statcontroller@index');
 Route::get('/stats', 'statcontroller@index');
-Route::get('/add', 'statcontroller@create');
+Route::get('/add', 'statcontroller@create')->middleware('auth');
 Route::post('/addcreate', 'statcontroller@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

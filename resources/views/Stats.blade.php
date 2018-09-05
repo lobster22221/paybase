@@ -35,7 +35,53 @@
         </td>
     </tr>  
     </table>
+        
+        gRAPH
         <br>
+        <canvas id="myChart" width="400" height="400"></canvas>
+        <script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [
+            @foreach ($wage as $pay)
+                        '{{ \Carbon\Carbon::parse($pay['date'])->format('F d , Y')}}' ,
+                        @endforeach
+        ],
+        datasets: [{
+            label: '# of Votes',
+            data: [
+                        @foreach ($wage as $pay)
+                        {{$pay['tip']}},
+                        @endforeach
+                        
+                    ],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+               
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+               
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+        
+        
+        
     <table  class="table table-striped">
         <thead>
     <tr>

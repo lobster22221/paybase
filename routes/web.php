@@ -15,3 +15,7 @@ Route::get('/', 'statcontroller@index');
 Route::get('/stats', 'statcontroller@index');
 Route::get('/add', 'statcontroller@create');
 Route::post('/addcreate', 'statcontroller@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -10,7 +10,7 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/add">Add new Stat</a>
+        <a class="nav-link" href="/addstat">Add new Stat</a>
       </li>
       
     </ul>

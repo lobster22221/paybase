@@ -3,13 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/AddWage.blade.php</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/app/Http/Controllers/HomeController.php</file>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/Layout.blade.php</file>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/public/js/bootstrap.bundle.js</file>
-            <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/Components/Navbar.blade.php</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/app/Wage.php</file>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/app/Http/Controllers/statController.php</file>
-            <file>file:/F:/Server/XAMPP/htdocs/paybase/routes/web.php</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/app/Http/Controllers/Auth/LoginController.php</file>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/Stats.blade.php</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/AddWage.blade.php</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/storage/app/public/.gitignore</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/public/index.php</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/Components/Navbar.blade.php</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/readme.md</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/routes/web.php</file>
         </group>
     </open-files>
 </project-private>

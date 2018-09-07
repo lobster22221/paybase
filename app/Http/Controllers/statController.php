@@ -19,7 +19,7 @@ class statController extends Controller
         $maxtip = Wage::max('tip');
         $mintip = Wage::min('tip');       
         $count = Wage::count('tip');
-        
+        $total = Wage::sum('tip');
         //calc stddev
         $variance = 0.00;
         foreach($wage as $i)
@@ -30,12 +30,13 @@ class statController extends Controller
         }
         
          $std = (float)sqrt($variance/$count);
-        return view("Stats", [
+        return view("Stats/Stats", [
             "wage"=>$wage, 
             "tipavg"=>$avg,
             "tipmax"=>$maxtip,
             "tipmin"=>$mintip,
-             "std"=>$std]);
+             "std"=>$std,
+            "total"=>$total]);
         
     }
 
@@ -46,7 +47,7 @@ class statController extends Controller
      */
     public function create()
     {
-        return view('AddWage');
+        return view('Stats/AddWage');
     }
 
     /**

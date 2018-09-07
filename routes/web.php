@@ -13,9 +13,14 @@
 
 Route::get('/', 'statcontroller@index');
 Route::get('/stats', 'statcontroller@index');
-Route::get('/add', 'statcontroller@create')->middleware('auth');
-Route::post('/addcreate', 'statcontroller@store');
+Route::get('/addstat', 'statcontroller@create')->middleware('auth');
+Route::post('/createstat', 'statcontroller@store')->middleware('auth');;
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//blog
+Route::get('/blog', 'blogcontroller@index');
+
+Route::get('/blog/{id}', 'blogcontroller@index');

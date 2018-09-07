@@ -34,6 +34,13 @@
              ?>
         </td>
     </tr>  
+     <tr>
+        <td>total</td>        
+        <td><?php 
+           echo '$' . number_format($total, 2, '.', ',');
+             ?>
+        </td>
+    </tr>  
     </table>
         
         Tip graph
@@ -74,8 +81,7 @@ var myChart = new Chart(ctx, {
                 ticks: {
                     beginAtZero:false,
                      callback: function(value, index, values) {
-                        return '$' + value}
-                    
+                        return '$' + value}                    
                 }
             }]
                

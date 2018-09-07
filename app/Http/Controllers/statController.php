@@ -30,7 +30,7 @@ class statController extends Controller
         }
         
          $std = (float)sqrt($variance/$count);
-        return view("Stats/Stats", [
+        return view("/Stats/Stats", [
             "wage"=>$wage, 
             "tipavg"=>$avg,
             "tipmax"=>$maxtip,

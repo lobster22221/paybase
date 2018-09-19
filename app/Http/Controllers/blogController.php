@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Post;
 class blogController extends Controller
 {
     //display recent posts
     public function index()
     {
-        
+        $posts = Post::all();
+         return view("blog.blog", compact('posts'));
     }
     
     public function post($id)

@@ -12,7 +12,9 @@
       <li class="nav-item">
         <a class="nav-link" href="/addstat">Add new Stat</a>
       </li>
-      
+      <li class="nav-item">
+        <a class="nav-link" href="/blog">Blog</a>
+      </li>
     </ul>
       
   </div>

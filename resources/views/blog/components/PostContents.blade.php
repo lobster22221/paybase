@@ -3,7 +3,12 @@
             <p class="blog-post-meta">{{
                 \Carbon\Carbon::parse($post['created_at'])->format('F d , Y')
                 }}
-                by <a href="#">{{$post['author']}}</a></p>
+                
+                  
+                by <a href="#">
+                    {{
+                   $post->user()->name
+                    }}</a></p>
             {{$post['post_content']}}
 
             

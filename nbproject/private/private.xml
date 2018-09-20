@@ -3,14 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/blog/createpost.blade.php</file>
-            <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/blog/post.blade.php</file>
-            <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/Components/Navbar.blade.php</file>
-            <file>file:/F:/Server/XAMPP/htdocs/paybase/app/Http/Controllers/statController.php</file>
-            <file>file:/F:/Server/XAMPP/htdocs/paybase/routes/web.php</file>
-            <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/Stats/AddWage.blade.php</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/blog/layouts/layout.blade.php</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/app/Post.php</file>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/app/Http/Controllers/blogController.php</file>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/blog/blog.blade.php</file>
+            <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/blog/components/PostContents.blade.php</file>
             <file>file:/F:/Server/XAMPP/htdocs/paybase/resources/views/Stats.blade.php</file>
         </group>
     </open-files>

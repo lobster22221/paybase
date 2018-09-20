@@ -6,7 +6,7 @@ Blog
 @section('content')
 @foreach ($posts as $post)
 
-@include('blog.components.PostContents',$post)
+@include('blog.components.PostContents',array('post' => $post))
 
 @endforeach 
 

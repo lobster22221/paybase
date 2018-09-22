@@ -5,8 +5,7 @@
   <body>
     <div class="container">
         <div class="nav-scroller py-1 mb-2">
-        @include('components.navbar')
-      </div>      
+        @include('components.Navbar')      </div>      
     </div>
 
     <main role="main" class="container">

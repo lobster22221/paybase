@@ -1,11 +1,11 @@
 
 <!doctype html>
 <html lang="en">
-  @include('blog.Components.header')
+  @include('blog.components.header')
   <body>
     <div class="container">
         <div class="nav-scroller py-1 mb-2">
-        @include('Components.navbar')
+        @include('components.Navbar')
       </div>      
     </div>
 

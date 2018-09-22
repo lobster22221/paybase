@@ -1,8 +1,9 @@
-<?php
+@extends('blog.layouts.layout')
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+@section('title')
+Blog
+@endsection
+@section('content')
+@include('blog.components.PostContents',array('post' => $post, 'users' => $user))
 
+@endsection

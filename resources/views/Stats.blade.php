@@ -1,4 +1,5 @@
-@extends('Layout')@section('content')
+@extends('Layout')
+@section('content')
 <div class="container">    
     <div class="row">
         <div class="col-sm"></div>

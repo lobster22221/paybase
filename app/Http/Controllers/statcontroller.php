@@ -70,7 +70,7 @@ class statController extends Controller
 ]);
         
         $w->save();
-        
+         return redirect()->to('/');
          
       
         

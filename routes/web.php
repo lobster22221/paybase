@@ -21,6 +21,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //blog
-Route::get('/blog', 'blogcontroller@index');
-
 Route::get('/blog/{id}', 'blogcontroller@index');
+=======
+Route::get('/blog/addPost', 'blogcontroller@create')->middleware('auth');
+Route::post('/blog/storepost', 'blogcontroller@store')->middleware('auth');
+Route::get('/blog/{id}', 'blogcontroller@post');

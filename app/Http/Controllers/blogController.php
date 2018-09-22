@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\User;
+use Auth;
 class blogController extends Controller
 {
     //display recent posts
@@ -33,8 +34,8 @@ class blogController extends Controller
     
     
     public function create()
-    {
-      
+    { 
+      return view("blog.createpost");
     }
 
     /**
@@ -45,8 +46,14 @@ class blogController extends Controller
      */
     public function store(Request $request)
     {
-       
-        
+       $post = Post::create([
+        'created_at' =>  date('Y-m-d H:i:s'),
+        'user' => '1',
+        'post_title' => request('title'),
+        'post_content' => request('content'),
+]);
+        $post->save();
+         return redirect()->to('/');
      
     }
 

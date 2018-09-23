@@ -9,7 +9,7 @@
                     {{
                    $post->user()->name
                     }}</a></p>
-            {{$post['post_content']}}
+            {!!$post['post_content']!!}
 
             
           </div><!-- /.blog-post -->

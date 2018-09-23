@@ -1,7 +1,7 @@
 @extends('Layout')
 
 @section('content')
-<form method="POST" action="/blog/createWage">
+<form method="POST" action="/createstat">
 {!! csrf_field() !!}
 <div class="form-group">
     <label for="formDate">Date</label>

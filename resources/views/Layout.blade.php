@@ -16,7 +16,7 @@
         
 
         
-        @include('Components.Navbar')
+        @include('components.Navbar')
         @yield('content')
     </body>
 </html>

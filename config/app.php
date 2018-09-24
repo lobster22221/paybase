@@ -124,7 +124,6 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
-UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class, Intervention\Image\ImageServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -155,6 +154,10 @@ UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class, Interventi
         /*
          * Application Service Providers...
          */
+
+	UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
+ Intervention\Image\ImageServiceProvider::class,
+
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,

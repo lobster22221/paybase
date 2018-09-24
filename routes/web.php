@@ -26,3 +26,4 @@ Route::get('/blog/addPost', 'blogcontroller@create')->middleware('auth');
 Route::post('/blog/storepost', 'blogcontroller@store');
 Route::get('/blog/{id}', 'blogcontroller@post');
 
+Route::get('/admin/', 'admincontroller@index');

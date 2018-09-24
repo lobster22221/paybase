@@ -74,7 +74,51 @@ var myChart = new Chart(ctx, {
                
             ],
             borderWidth: 1.5
-        }]
+        },{
+            label: 'Average',
+            data: [
+                @foreach ($wage as $pay)
+                {{$tipavg}},
+                        @endforeach
+                    
+            ],           
+            borderColor: [
+                'rgba(255,0,0,0)',
+               
+            ],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.0)',
+               
+            ],
+            
+            borderWidth: 1.5
+        }
+        ,{
+            label: 'running Average',
+            data: [
+                <?php $a = 0; $c = 0;?>
+                @foreach ($wage as $pay)
+                <?php 
+                    $a = (($a*$c) + $pay['tip'])/($c+1);
+                    $c = $c+1;
+                    echo $a.",";
+                ?>
+                @endforeach
+                    
+            ],           
+            borderColor: [
+                'rgba(0,255,0,1)',
+               
+            ],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.0)',
+               
+            ],
+            
+            borderWidth: 1.5
+        }
+    
+            ]
     },
     options: {
         scales: {

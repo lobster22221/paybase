@@ -74,7 +74,27 @@ var myChart = new Chart(ctx, {
                
             ],
             borderWidth: 1.5
-        }]
+        },{
+            label: 'Average',
+            data: [
+                @foreach ($wage as $pay)
+                        {{$tipavg}},
+                        @endforeach
+                    
+            ],           
+            borderColor: [
+                'rgba(255,0,0,1)',
+               
+            ],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.0)',
+               
+            ],
+            
+            borderWidth: 1.5
+        }
+    
+            ]
     },
     options: {
         scales: {

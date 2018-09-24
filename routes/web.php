@@ -26,6 +26,3 @@ Route::get('/blog/addPost', 'blogcontroller@create')->middleware('auth');
 Route::post('/blog/storepost', 'blogcontroller@store');
 Route::get('/blog/{id}', 'blogcontroller@post');
 
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
-     \UniSharp\LaravelFilemanager\Lfm::routes();
- });

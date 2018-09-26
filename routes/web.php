@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'statcontroller@index');
+Route::get('/', 'blogcontroller@index');
 Route::get('Stats/Stats', 'statcontroller@index');
 Route::get('/addstat', 'statcontroller@create')->middleware('auth');
 Route::post('/createstat', 'statcontroller@store')->middleware('auth');;

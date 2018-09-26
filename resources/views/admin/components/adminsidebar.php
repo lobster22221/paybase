@@ -42,7 +42,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/">
+                <a class="nav-link" href="/Stats/Stats">
                   <span data-feather="file-text"></span>
                   View raw data
                 </a>

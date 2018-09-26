@@ -22,7 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //blog
 Route::get('/blog/', 'blogcontroller@index');
-Route::get('/blog/addPost', 'blogcontroller@create')->middleware('auth');
+Route::get('/blog/addPost', 'blogcontroller@create')->middleware('checkrole:admin');
 Route::post('/blog/storepost', 'blogcontroller@store');
 Route::get('/blog/{id}', 'blogcontroller@post');
 

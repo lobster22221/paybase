@@ -11,7 +11,7 @@ class blogController extends Controller
     //display recent posts
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('id', 'DESC')->get();
        // $user;
         //foreach($posts as $post) {
              
@@ -26,10 +26,10 @@ class blogController extends Controller
     public function post($pid)
     {
         $post = Post::where('id', $pid)->first();
-        $user;
-        $user['0']= User::where('id', $post->user());
+        
             
-         return view("blog.post", compact('post', 'user'));
+         return view("blog.post", compact('post'));
+         //return view("blog.post", compact('post', 'user'));
     }
     
     

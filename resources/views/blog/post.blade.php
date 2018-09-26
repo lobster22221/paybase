@@ -4,6 +4,6 @@
 Blog
 @endsection
 @section('content')
-@include('blog.components.PostContents',array('post' => $post, 'users' => $user))
+@include('blog.components.PostContents',array('post' => $post))
 
 @endsection

@@ -1,3 +1,5 @@
 /files
 /public/storage
 /storage/*.key
+/photos
+/photos/*

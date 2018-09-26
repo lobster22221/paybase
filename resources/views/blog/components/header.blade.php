@@ -16,10 +16,4 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <link href="blog.css" rel="stylesheet">
     
-    <!-- Main Quill library -->
-<script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
 
-<!-- Theme included stylesheets -->
-<link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-<link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
-    

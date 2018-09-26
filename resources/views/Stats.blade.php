@@ -4,39 +4,36 @@
     <div class="row">
         <div class="col-sm"></div>
         <div class="col-12">
-        <h1>overall Stats</h1>   
-        full table
-        
-             
+        <h1>Overall Stats</h1>  
     <table class="table table-dark">    
     <tr>
-        <td>Average Tip</td>        
+        <td>Average tip</td>        
         <td><?php 
            echo '$' . number_format($tipavg, 2, '.', ',');
              ?></td>
     </tr>  
     <tr>
-        <td>Highest Tip</td>        
+        <td>Highest tip</td>        
         <td><?php 
            echo '$' . number_format($tipmax, 2, '.', ',');
              ?></td>
     </tr>  
     <tr>
-        <td>Lowest Tip</td>        
+        <td>Lowest tip</td>        
         <td><?php 
            echo '$' . number_format($tipmin, 2, '.', ',');
              ?>
         </td>
     </tr>  
     <tr>
-        <td>std dev</td>        
+        <td>SD</td>        
         <td><?php 
            echo '$' . number_format($std, 2, '.', ',');
              ?>
         </td>
     </tr>  
      <tr>
-        <td>total</td>        
+        <td>Total Earned</td>        
         <td><?php 
            echo '$' . number_format($total, 2, '.', ',');
              ?>
@@ -94,7 +91,7 @@ var myChart = new Chart(ctx, {
             borderWidth: 1.5
         }
         ,{
-            label: 'running Average',
+            label: 'Running average',
             data: [
                 <?php $a = 0; $c = 0;?>
                 @foreach ($wage as $pay)

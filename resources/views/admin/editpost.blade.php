@@ -1,16 +1,16 @@
-@extends('blog.layouts.layout')
+@extends('admin.layout.layout')
 
 @section('content')
-<form method="POST" id="form" action="/blog/storepost">
+<form method="POST" id="form" action="/admin/updatepost" class="col-md-8">
 {!! csrf_field() !!}
-<div class="form-group">
+<div class="form-group-">
     <label for="formTitle">title</label>
-    <input type="text" class="form-control" id="formTitle" name="title">
+    <input type="text" class="form-control" id="formTitle" name="title" value="{!!$post['post_title']!!}">
 </div>
 <div class="form-group">
     
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-<textarea name="content" class="form-control my-editor"></textarea>
+<textarea name="content" class="form-control my-editor">{!!$post['post_content']!!}</textarea>
 <script>
   var editor_config = {
     path_absolute : "/",
@@ -42,10 +42,13 @@
         resizable : "yes",
         close_previous : "no"
       });
-    }
+    },
+    
   };
-
+ 
   tinymce.init(editor_config);
+ 
+ 
 </script>
     
 </div>

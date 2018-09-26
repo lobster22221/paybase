@@ -76,7 +76,13 @@ class blogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::where('id', $id)->first();
+        $user;
+        $user['0']= User::where('id', $post->user());
+        return view("admin.editpost", compact('post'));
+        
+        
+         
     }
 
     /**
@@ -88,7 +94,7 @@ class blogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return redirect()->to('/admin');
     }
 
     /**
@@ -99,6 +105,8 @@ class blogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::where('id', $id)->first();
+        $post->delete();
+        return redirect()->to('/admin');
     }
 }

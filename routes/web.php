@@ -26,4 +26,11 @@ Route::get('/blog/addPost', 'blogcontroller@create')->middleware('auth');
 Route::post('/blog/storepost', 'blogcontroller@store');
 Route::get('/blog/{id}', 'blogcontroller@post');
 
+
+
 Route::get('/admin/', 'admincontroller@index');
+Route::get('/admin/fileManager', 'admincontroller@filemanager');
+Route::get('/admin/addPost', 'admincontroller@createPost');
+Route::get('/admin/viewPosts', 'admincontroller@viewPosts');
+Route::get('/admin/editPost/{id}', 'blogcontroller@edit');
+Route::get('/admin/deletePost/{id}', 'blogcontroller@destroy');

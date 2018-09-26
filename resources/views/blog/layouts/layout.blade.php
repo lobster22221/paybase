@@ -1,7 +1,9 @@
 
 <!doctype html>
 <html lang="en">
+    <head>
   @include('blog.components.header')
+  </head>
   <body>
     <div class="container-fluid">
         <div class="nav-scroller py-1 mb-2">

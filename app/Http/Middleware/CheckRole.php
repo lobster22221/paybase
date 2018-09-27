@@ -15,6 +15,10 @@ class CheckRole
      */
     public function handle($request, Closure $next, $permission)
     {
+        if($request->user() == null)
+        {
+            return redirect()->to('/');
+        }
         if (! $request->user()->hasRole($permission)) {
             return redirect()->to('/');
         }

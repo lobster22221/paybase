@@ -14,4 +14,5 @@ class Wage extends Model
     public $hours;
     public $tip;
     public $employer;
+    
 }

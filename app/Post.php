@@ -17,5 +17,9 @@ class Post extends Model
      {
          return $this->belongsTo(User::class, 'user')->first();
      }
+      public function tags()
+     {
+         return $this->belongsToMany(Tag::class);
+     }
 }
 

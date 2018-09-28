@@ -12,4 +12,14 @@
             {!!$post['post_content']!!}
 
             
-          </div><!-- /.blog-post -->
+</div><!-- /.blog-post -->
+tags:
+<div class="blog-tags">
+    @foreach($post->tags as $tag)
+    <a href ="#">{{$tag->description}}</a>
+    @if (!$loop->last) , @endif
+    
+    
+    @endforeach
+   
+</div>

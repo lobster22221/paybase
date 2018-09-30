@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\User;
+use App\Tag;
 use Auth;
 class blogController extends Controller
 {
@@ -108,5 +109,31 @@ class blogController extends Controller
         $post = Post::where('id', $id)->first();
         $post->delete();
         return redirect()->to('/admin');
+    }
+    /**
+     * Search for specific posts
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request)
+    {
+        $s = $request->input('s');
+		
+		// Query and paginate result
+		$posts = Post::where('post_title', 'like', "%$s%")
+				->orWhere('post_content', 'like', "%$s%")
+				->paginate(6);
+        $total = $posts->total();
+		return view('blog.blog_search', ['posts' => $posts, 's' => $s, 'total' => $total ]);
+	
+    }
+    public function searchTag($id)
+    {
+        $posts = Tag::where('description', $id)->first();
+        //dd($posts->posts)    ;
+        $total = count($posts->posts)    ;
+         return view('blog.blog_search', ['posts' => $posts->posts, 's' => $id ,'total' => $total ]);
+	
     }
 }

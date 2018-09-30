@@ -16,7 +16,7 @@
 tags:
 <div class="blog-tags">
     @foreach($post->tags as $tag)
-    <a href ="#">{{$tag->description}}</a>
+    <a href ="/tag/{{$tag->description}}">{{$tag->description}}</a>
     @if (!$loop->last) , @endif
     
     

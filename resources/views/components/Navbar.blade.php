@@ -19,6 +19,11 @@
         <a class="nav-link" href="/admin">Admin</a>
       </li>
     </ul>
-      
+     
+      <form class="form-inline" method="GET" action="/search/">
+
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="s" >
+    <input class="btn btn-outline-success my-2 my-sm-0" type="submit">
+  </form>
   </div>
 </nav>

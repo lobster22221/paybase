@@ -25,7 +25,8 @@ Route::get('/blog/', 'blogcontroller@index');
 Route::get('/blog/addPost', 'blogcontroller@create')->middleware('checkrole:admin');
 Route::post('/blog/storepost', 'blogcontroller@store')->middleware('checkrole:admin');;
 Route::get('/blog/{id}', 'blogcontroller@post');
-
+Route::get('/search/', 'blogcontroller@search');
+Route::get('/tag/{id}', 'blogcontroller@searchTag');
 
 
 Route::get('/admin/', 'admincontroller@index')->middleware('checkrole:admin');;

@@ -52,8 +52,40 @@ class blogController extends Controller
         'user' => '1',
         'post_title' => request('title'),
         'post_content' => request('content'),
-]);
+        ]);
+       //tags are comma seperated, I need to filter them so I found this code
+       
+        $tagsString = request('tags') !== null ? (string)strip_tags(request('tags')) : '';
+       
+        $tags_array;  
+        
+       
         $post->save();
+        
+        if ($tagsString != '') {
+            $tags_array = explode(",", $tagsString);
+            $tags_array = array_unique($tags_array); //no dups, please
+           
+            foreach($tags_array AS $key => $tag)
+            {
+                    $tag = trim(stripslashes($tag));
+                    if($tag == '') continue; //skips if empty
+                    echo $key.' - '.$tag;                    
+                    if (Tag::where('description', "$tag")->exists()) {                      
+                       
+                        $post->tags()->attach(Tag::where('description', "$tag")->first());
+                    }
+                    else 
+                    {
+                        $t = Tag::create([
+                        'description' =>  $tag
+                        ]);
+                         $post->tags()->attach($t);
+                    }
+                    
+            }
+        }
+        
          return redirect()->to('/');
      
     }

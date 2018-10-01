@@ -50,7 +50,10 @@
 </script>
     
 </div>
-
+<div class="form-group-">
+    <label for="formTitle">tags</label>
+    <input type="text" class="form-control" id="formTags" name="tags">
+</div>
 <button type="submit" id="submit" class="btn btn-primary">Submit</button>
 
   

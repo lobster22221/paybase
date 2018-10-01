@@ -127,6 +127,11 @@ class blogController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $post = Post::where('id', $id)->first();
+        $post->created_at = date('Y-m-d H:i:s');   
+        $post->post_title = request('title');   
+        $post->post_content = request('content');   
+        $post->update();
         return redirect()->to('/admin');
     }
 
@@ -138,7 +143,10 @@ class blogController extends Controller
      */
     public function destroy($id)
     {
+        
+        
         $post = Post::where('id', $id)->first();
+        $post->tags()->detach();
         $post->delete();
         return redirect()->to('/admin');
     }

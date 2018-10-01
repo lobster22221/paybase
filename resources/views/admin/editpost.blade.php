@@ -1,7 +1,7 @@
 @extends('admin.layout.layout')
 
 @section('content')
-<form method="POST" id="form" action="/admin/updatepost" class="col-md-8">
+<form method="POST" id="form" action="/admin/updatepost/{{$post['id']}}" class="col-md-8">
 {!! csrf_field() !!}
 <div class="form-group-">
     <label for="formTitle">title</label>

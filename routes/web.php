@@ -23,7 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 //blog
 Route::get('/blog/', 'blogcontroller@index');
 Route::get('/blog/addPost', 'blogcontroller@create')->middleware('checkrole:admin');
-Route::post('/blog/storepost', 'blogcontroller@store')->middleware('checkrole:admin');;
+Route::post('/blog/storepost', 'blogcontroller@store')->middleware('checkrole:admin');
 Route::get('/blog/{id}', 'blogcontroller@post');
 Route::get('/search/', 'blogcontroller@search');
 Route::get('/tag/{id}', 'blogcontroller@searchTag');
@@ -33,5 +33,6 @@ Route::get('/admin/', 'admincontroller@index')->middleware('checkrole:admin');;
 Route::get('/admin/fileManager', 'admincontroller@filemanager')->middleware('checkrole:admin');;
 Route::get('/admin/addPost', 'admincontroller@createPost')->middleware('checkrole:admin');
 Route::get('/admin/viewPosts', 'admincontroller@viewPosts')->middleware('checkrole:admin');;
-Route::get('/admin/editPost/{id}', 'blogcontroller@edit')->middleware('checkrole:admin');;
+Route::get('/admin/editPost/{id}', 'blogcontroller@edit')->middleware('checkrole:admin');
+Route::post('/admin/updatepost/{id}', 'blogcontroller@update')->middleware('checkrole:admin');
 Route::get('/admin/deletePost/{id}', 'blogcontroller@destroy')->middleware('checkrole:admin');;

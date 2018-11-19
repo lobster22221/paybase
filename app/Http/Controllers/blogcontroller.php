@@ -12,16 +12,15 @@ class blogController extends Controller
     //display recent posts
     public function index()
     {
-        $posts = Post::orderBy('id', 'DESC')->get();
-       // $user;
-        //foreach($posts as $post) {
-             
-         //   $user = User::where('id', $post->user())->first();
-        //}
-        
-        //dd($user);
+        $posts = Post::latest()
+                ->filter(request(['month', 'year']))
+                ->get();
+                
+                
+       
+      
          return view("blog.blog", compact('posts'));
-         //return view("blog.blog", compact('posts', 'user'));
+        
     }
     
     public function post($pid)
@@ -128,7 +127,7 @@ class blogController extends Controller
     public function update(Request $request, $id)
     {
         $post = Post::where('id', $id)->first();
-        $post->created_at = date('Y-m-d H:i:s');   
+        $post->updated_at = date('Y-m-d H:i:s');   
         $post->post_title = request('title');   
         $post->post_content = request('content');   
         $post->update();

@@ -1,5 +1,5 @@
 <div class="blog-post">
-            <h2 class="blog-post-title">{{$post['post_title']}}</h2>
+    <a href="/blog/{{$post->id}}"><h2 class="blog-post-title">{{$post['post_title']}}</h2></a>
             <p class="blog-post-meta">{{
                 \Carbon\Carbon::parse($post['created_at'])->format('F d , Y')
                 }}

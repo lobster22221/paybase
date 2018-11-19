@@ -1,7 +1,12 @@
 <aside class="col-md-4 blog-sidebar">
           <div class="p-3">
             <h4 class="font-italic">Archives</h4>
-            
+            @foreach ($archives as $stat)
+               
+                <li>                    
+                    <a href="/blog/?month={{$stat['month']}}&year={{$stat['year']}}">{{$stat['month']}} {{$stat['year']}}</a>
+                </li>
+            @endforeach
           </div>
 
           <div class="p-3">
